@@ -1,12 +1,12 @@
 #!usr/bin/env Python 3
 
 """
-This script will scrape a url for the title tag an first paragraph and create a text file to write this info to.
+This script will create a dictionary of names and usernames.
+
+Goals: use github to push changes
 
 To run this script from the command line type:
 python hw7.py
-
-#added another comment
 
 Assumptions:
 
@@ -18,12 +18,11 @@ Beautiful Soup
 
 from sortedcontainers import SortedDict
 
-
 def print_menu():
     print('1. Print Users')
     print('2. Add a User')
     print('3. Remove a User')
-    print('4. Lookup a Phone Number')
+    print('4. Lookup a Username')
     print('5. Quit')
     print()
 
@@ -33,7 +32,7 @@ usernames = SortedDict()
 usernames['Summer'] = 'summerela'
 usernames['William'] = 'GoofyFish'
 usernames['Steven'] = 'LoLCat'
-usernames['Zara'] = 'zanyZara'
+usernames['Zaraaaa'] = 'zanyZara'
 usernames['Renato'] = 'songDude'
 
 # setup counter to store menu choice
@@ -45,7 +44,12 @@ print_menu()
 # as long as the menu choice isn't "quit" get user options
 while menu_choice != 5:
     # get menu choice from user
-    menu_choice = int(input("Type in a number (1-5): "))
+    while True:
+        try:
+            menu_choice = int(input("Type in a number (1-5): "))
+            break
+        except ValueError:
+            print("That was not a number, please select a number!")
 
     # view current entries
     if menu_choice == 1:
@@ -65,19 +69,24 @@ while menu_choice != 5:
         print("Remove User")
         name = input("Name: ")
         if name in usernames:
-            pass  # delete that entry
+            usernames.pop(name)
+        else:
+            print ("Name not found!")
 
     # view user name
     elif menu_choice == 4:
         print("Lookup User")
         name = input("Name: ")
         if name in usernames:
-            pass  # print the username
+            print("Username found! Their username is: {}".format(usernames[name]))
         else:
-            pass  # print username not found
+            print ("username not found!")
 
     # is user enters something strange, show them the menu
     elif menu_choice != 5:
+        print("Sorry! {} is not a menu option! Please make another selection".format(menu_choice))
         print_menu()
+
+
  
 #TURNED hello Seattle INTO A COMMENT
