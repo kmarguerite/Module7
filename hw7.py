@@ -6,6 +6,8 @@ This script will scrape a url for the title tag an first paragraph and create a 
 To run this script from the command line type:
 python hw7.py
 
+#added another comment
+
 Assumptions:
 
 
