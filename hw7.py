@@ -32,8 +32,9 @@ usernames = SortedDict()
 usernames['Summer'] = 'summerela'
 usernames['William'] = 'GoofyFish'
 usernames['Steven'] = 'LoLCat'
-usernames['Zaraaaa'] = 'zanyZara'
+usernames['Zara'] = 'zanyZara'
 usernames['Renato'] = 'songDude'
+usernames['Kate'] = 'HedgehogBestie'
 
 # setup counter to store menu choice
 menu_choice = 0
