@@ -77,4 +77,5 @@ while menu_choice != 5:
     # is user enters something strange, show them the menu
     elif menu_choice != 5:
         print_menu()
-hello Seattle
+ 
+#TURNED hello Seattle INTO A COMMENT
