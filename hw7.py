@@ -10,14 +10,13 @@ python hw7.py
 
 Assumptions:
 
-
 Requires:
 Anaconda Python3
-Beautiful Soup
 """
 
 from sortedcontainers import SortedDict
 
+#menu of options
 def print_menu():
     print('1. Print Users')
     print('2. Add a User')
@@ -88,6 +87,3 @@ while menu_choice != 5:
         print("Sorry! {} is not a menu option! Please make another selection".format(menu_choice))
         print_menu()
 
-
- 
-#TURNED hello Seattle INTO A COMMENT
